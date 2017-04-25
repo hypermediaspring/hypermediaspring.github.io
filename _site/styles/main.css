@@ -1,0 +1,140 @@
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #000;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+header{
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  width: 80%;
+}
+
+header h1{
+  font-size: 7vw;
+  margin-top: 0px;
+}
+
+header p{
+  font-size: 16px;
+  color: #555;
+}
+
+/****************************************/
+
+.grid{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 50px;
+  /*background: pink;*/
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.grid-item{
+  /*background: honeydew;*/
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.stencil{
+
+  position: relative;
+
+}
+
+.stencil .grad{
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.6));
+  transition: background 0.3s;
+}
+
+.stencil .hoverGrad{
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3));
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.stencil img{
+  z-index: 0;
+}
+
+.stencil h3{
+  position: absolute;
+  bottom: 45px;
+  left: 15px;
+  z-index: 1;
+  color: #fff;
+}
+
+.stencil:hover .hoverGrad{
+  opacity: 100;
+}
+
+/****************************************/
+
+.container {
+  height: 525px;
+  width: 80%;
+  margin: 0 auto 50px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.container img {
+  float: left;
+  margin-bottom: 25px;
+  margin-right: 15px;
+	max-width: 500px;
+	height: auto;
+}
+
+.container p:last-child {
+	float: clear;
+}
+
+/****************************************/
+
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 1255px) {
+  .grid-item{
+    height: 250px;
+    width: 250px;
+  }
+
+  .stencil img{
+      width: 250px;
+      height: 250px;
+  }
+}
+
+@media screen and (max-width: 624px) {
+  .grid{
+    justify-content: center;
+  }
+}

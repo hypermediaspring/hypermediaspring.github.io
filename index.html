@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<div class = "grid">
+	{% for post in site.posts %}
+		<div class="grid-item stencil">
+			<a href = "{{ post.url }}">
+				<img src="{{ site.baseurl }}/assets/img/{{ post.imgUrl }}" width="500px" height="500px">
+				<div class = "grad"></div>
+				<div class = "hoverGrad"></div>
+				<h3>{{ post.title }}</h3>
+			</a>
+		</div>
+	{% endfor %}
+</div>
